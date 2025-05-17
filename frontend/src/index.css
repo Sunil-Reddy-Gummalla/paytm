@@ -1,68 +1,228 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
-  color-scheme: light dark;
+/* Dashboard Container */
+.dashboard-container {
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* Prevent content from overflowing rounded corners */
+}
+
+/* Header */
+.dashboard-container > section.header {
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-container > section.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.dashboard-container > section.header div {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-container > section.header svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+/* Balance */
+.dashboard-container > section.balance {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* User Search */
+.dashboard-container > section.users-search {
+  padding: 20px;
+}
+
+.dashboard-container > section.users-search label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.dashboard-container > section.users-search input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* User List */
+.dashboard-container > section.users-list {
+  padding: 20px;
+}
+
+.user-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.user-details div {
+  display: flex;
+  align-items: center;
+}
+
+.user-details svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* General Button Styles (can be overridden) */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Existing styles - keep these */
+:root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  width: 100%;
+  height: 100vh;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px auto; /* Changed margin */
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: block; /* Added display: block */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background-color: #3e8e41;
+}
+
+.login-container {
+  background-color: aliceblue;
+  color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+label {
+  font-size: large;
+  font-weight: 600;
+  color: rgb(78, 22, 22);
+  width: 100%;
+}
+
+input {
+  width: 20rem;
+  line-height: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+  border: 1px solid rgb(212, 212, 223);
+  padding: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.login-info {
+  font-size: 0.9rem;
+  color: rgb(84, 89, 93);
+  padding-top: 0.25rem;
+}
+
+a {
+  text-decoration: underline;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+a:hover {
+  color: darkblue;
+}
+
+.dashboard-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+.dashboard-container > section.header {
+  border-bottom: 1px solid black;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-container > section.balance {
+  padding: 1rem;
+}
+
+.dashboard-container > section.users-search input {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 90%;
 }
